@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/yemekListeFragment">
+
+    <fragment
+        android:id="@+id/yemekDetay"
+        android:name="com.example.yemek_tarifleri.YemekDetay"
+        android:label="fragment_yemek_detay"
+        tools:layout="@layout/fragment_yemek_detay">
+        <action
+            android:id="@+id/action_yemekDetay_to_yemekListeFragment"
+            app:destination="@id/yemekListeFragment" />
+        <argument
+            android:name="navigateInfo"
+            app:argType="string" />
+        <argument
+            android:name="itemId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/yemekListeFragment"
+        android:name="com.example.yemek_tarifleri.YemekListeFragment"
+        android:label="fragment_yemek_liste"
+        tools:layout="@layout/fragment_yemek_liste">
+        <action
+            android:id="@+id/action_yemekListeFragment_to_yemekDetay"
+            app:destination="@id/yemekDetay" />
+    </fragment>
+</navigation>
