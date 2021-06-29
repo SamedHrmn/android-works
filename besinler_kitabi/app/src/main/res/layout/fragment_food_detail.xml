@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="food"
+            type="com.example.besinler_kitabi.model.FoodModel"/>
+    </data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FoodDetailFragment">
+
+
+    <ImageView
+        android:id="@+id/foodDetailImageView"
+        android:downloadImage="@{food.foodImage}"
+        android:layout_width="match_parent"
+        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp"
+        android:layout_height="200dp">
+
+    </ImageView>
+
+    <TextView
+
+        android:id="@+id/foodDetailNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{food.foodName}"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/foodDetailImageView"
+        android:layout_margin="8dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/foodDetailCalorieTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{food.foodCalorie}"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/foodDetailNameTextView"
+        android:layout_margin="8dp">
+
+    </TextView>
+
+
+
+    <TextView
+        android:id="@+id/foodDetailCarbohydrateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{food.foodCarbonhydrate}"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/foodDetailCalorieTextView"
+        android:layout_margin="8dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/foodDetailProteinTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{food.foodProtein}"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/foodDetailCarbohydrateTextView"
+        android:layout_margin="8dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/foodDetailOilTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{food.foodOil}"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/foodDetailProteinTextView"
+        android:layout_margin="8dp">
+
+    </TextView>
+
+
+</RelativeLayout>
+    </layout>

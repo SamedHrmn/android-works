@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="food"
+            type="com.example.besinler_kitabi.model.FoodModel" />
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/foodUuid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(food.uuid)}"
+            android:visibility="gone">
+
+        </TextView>
+
+
+        <ImageView
+            android:id="@+id/foodImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="4dp"
+            android:downloadImage="@{food.foodImage}"
+            android:src="@drawable/ic_launcher_background">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/foodNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@{food.foodName}"
+                android:textAlignment="center"
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/foodCalorieTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="@{food.foodCalorie}"
+                android:textColor="@color/black">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>
